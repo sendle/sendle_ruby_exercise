@@ -1,35 +1,56 @@
-# SendleTest
+# Sendle Ruby Coding Test
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sendle_test`. To experiment with that code, run `bin/console` for an interactive prompt.
+Hi, thanks for taking the Sendle Elixir coding test.
 
-TODO: Delete this and the text above, and describe your gem
+The purpose of this test is for us to get a sense of your skill level with the Ruby
+Programming Language and to see how you think and your problem solving approach.
 
-## Installation
+The problem we've chosen is a pricing system, since we have one of those at Sendle.
+We're also trying to mimic what it's like to calculate a price for
+the delivery of a parcel, since we also do that quite extensively. So hopefully it gives
+you a flavour for some of the problems you might work on at Sendle.
 
-Add this line to your application's Gemfile:
 
-```ruby
-gem 'sendle_test'
-```
+This exercise consists of one failing top level integration spec. If you run `rake spec` you should
+see it fail. Your goal is to get that test to pass.
 
-And then execute:
+* Write as many additional tests and modules as you feel you need.
+* It's up to you to define the data structures used internally and as part of the public interface.
+* Feel free to use any gems you think will help and any parts of the Ruby core and standard libraries
+  you think are appropriate. Of course, the goal here is to show us clean, readable code and allow
+  us to see that you have maintainability and correctness at the forefront of your thinking, so keep
+  that in mind.
 
-    $ bundle
+Good luck, have fun.
 
-Or install it yourself as:
+## Getting Started
 
-    $ gem install sendle_test
+To get started, please clone this repository to your dev machine. Then create a new branch
+with the name `submission/<your-github-username>`. Commit to this branch as you work.
 
-## Usage
+For the exercise you'll have to build a pricing model and then use it to calculate
+and display the prices of a number of shipments.
 
-TODO: Write usage instructions here
+* Shipments are priced based on delivery range and weight.
+* Range is determined by the zones of the origin and destination suburbs.
+* If the suburbs are in the same zone, the range is `same-zone`.
+* If the origin is in two different zones, the range is `different-zone`.
+* If either the origin or destination is not in a zone, the shipment is not serviced.
+* If the weight exceeds the maxium weight, the shipment is not serviced.
 
-## Development
+The pricing model should be built from the following two data files. These files can be found in the `data` directory.
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+* `zones.csv` This contains the zone information. Zones are lists of suburbs, postcode pairs and a zone name.
+* `prices.csv` Each row contains the price to deliver a parcel of a given weight for a given range. All prices are in the same currency and weights are in grams.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## Submitting the test
 
-## Contributing
+When you have completed the exercise and wish to submit your work, please do the following:
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/seangeo/sendle_test.
+1. Make sure all your work is commited to your branch, good commit messages and telling a story
+   through the commits is a good thing.
+2. Zip up the folder containing your repo and send to either your recruitment contact or jobs@sendle.com.
+
+_**DO NOT PUSH THE REPO UP TO GITHUB OR CREATE A PULL REQUEST AGAINST THIS REPO.**
+
+Thanks!
