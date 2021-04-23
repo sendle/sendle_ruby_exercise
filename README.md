@@ -1,17 +1,16 @@
-# Sendle Ruby Coding Test
+# Sendle Ruby Technical Exercise
 
 **DO NOT FORK THIS REPOSITORY IN GITHUB, JUST CLONE IT AND FOLLOW THE INSTRUCTIONS FOR SUBMISSION AT THE END OF THE README**
 
-Hi, thanks for taking the Sendle Ruby coding test.
+Hi, thanks for taking the Sendle Ruby Technical Exercise.
 
-The purpose of this test is for us to get a sense of your skill level with the Ruby
+The purpose of this exercise is for us to get a sense of your skill level with the Ruby
 Programming Language and to see how you think and your problem solving approach.
 
 The problem we've chosen is a pricing system, since we have one of those at Sendle.
 We're also trying to mimic what it's like to calculate a price for
 the delivery of a parcel, since we also do that quite extensively. So hopefully it gives
 you a flavour for some of the problems you might work on at Sendle.
-
 
 This exercise consists of one failing top level integration spec. If you run `rake spec` you should
 see it fail. Your goal is to get that test to pass.
@@ -45,7 +44,7 @@ The pricing model should be built from the following two data files. These files
 * `zones.csv` This contains the zone information. Zones are lists of suburbs, postcode pairs and a zone name.
 * `prices.csv` Each row contains the price to deliver a parcel of a given weight for a given range. All prices are in the same currency and weights are in grams.
 
-## Submitting the test
+## Submitting the exercise
 
 When you have completed the exercise and wish to submit your work, please do the following:
 
